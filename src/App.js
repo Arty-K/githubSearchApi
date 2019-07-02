@@ -6,12 +6,6 @@ import UserPage from './components/User/UserPage/UserPage';
 import './main.scss';
 
 import getSearchResult from './services/getSearchResult';
-import fetchOrgs from './services/fetchOrgs';
-import fetchUsers from './services/fetchUsers';
-import fetchCollaborators from './services/fetchCollaborators';
-import fetchFollowers from './services/fetchFollowers';
-import fetchFollowing from './services/fetchFollowing';
-
 import paginationClickFollowers from './services/paginationClickFollowers';
 import paginationClickFollowing from './services/paginationClickFollowing';
 import paginationClickOrgs from './services/paginationClickOrgs';
@@ -21,7 +15,6 @@ import getOrganisationInfo from './services/getOrganisationInfo';
 import getUserInfo from './services/getUserInfo';
 
 export default class App extends Component {
-
     state = {
         inputValue:'',
         error: null,
@@ -58,11 +51,6 @@ export default class App extends Component {
 
     render() {
         this.getSearchResult = getSearchResult.bind(this);
-        this.fetchOrgs = fetchOrgs.bind(this);
-        this.fetchUsers = fetchUsers.bind(this);
-        this.fetchCollaborators = fetchCollaborators.bind(this);
-        this.fetchFollowers = fetchFollowers.bind(this);
-        this.fetchFollowing = fetchFollowing.bind(this);
         this.paginationClickOrgs = paginationClickOrgs.bind(this);
         this.paginationClickUsers = paginationClickUsers.bind(this);
         this.paginationClickCollaborators = paginationClickCollaborators.bind(this);
